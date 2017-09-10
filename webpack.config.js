@@ -23,15 +23,19 @@ module.exports = {
   ],
   module: {
     rules: [{
-      test: /\.js$/,
+      test: /(\.js)|(\.jsx)$/,
       exclude: /node_modules/,
       use: {
         loader: 'babel-loader',
         options: {
           presets: ['es2015', 'react'],
-          plugins: ['transform-runtime']
+          plugins: ['transform-object-rest-spread', 'transform-runtime']
         }
       }
+    }, {
+      test: /\.less/,
+      exclude: /node_modules/,
+      use: ['style-loader', 'css-loader', 'less-loader']
     }]
   }
 };
