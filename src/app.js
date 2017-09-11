@@ -9,7 +9,7 @@ const App = React.createClass({
     return {
       successfulDrop: false,
       todo: {
-        title: 'TODO',
+        title: 'TO DO',
         taskDescription: '',
         items: [{
           text: 'Create this app'

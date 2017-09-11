@@ -57,10 +57,26 @@
       border-color: greenyellow;
     }
     &-item {
+    word-wrap: break-word;
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 3px;
     background: @main;
     }
   }
+}
+
+.fade-enter,  {
+  transform: scale(0.01, 0.01);
+}
+
+.fade-enter.fade-enter-active {
+  transform: scale(1, 1);
+  transition: 250ms transform ease-out;
+}
+
+
+.fade-exit.fade-exit-active {
+  transform: scale(0, 0);
+  transition: 250ms transform ease-out;
 }
